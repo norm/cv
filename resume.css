@@ -1,0 +1,185 @@
+@import url(http://yui.yahooapis.com/2.6.0/build/reset-fonts/reset-fonts.css);
+@media print {
+    .page-break {
+        page-break-before:  always;
+        background:         none !important;
+    }
+    a {
+        text-decoration:    none;
+    }
+    #pdf {
+        display:            none;
+    }
+    #activities li {
+        display:            block !important;
+    }
+    #activities a:before {
+        content:            attr(href) ' - ';
+    }
+    #activities li:after {
+        content:            '';
+    }
+    /* over-ride to public url */
+    #linkedin:before {
+        content:            'http://www.linkedin.com/in/marknormanfrancis - '
+                            !important;
+    }
+    #latest:after {
+        content:            ' is available from http://cv.marknormanfrancis.com/';
+    }
+}
+
+body {
+    width:              840px;
+    margin:             0 auto;
+    position:           relative;
+    font-family:        'Museo Sans',
+                        'Calibri',
+                        sans-serif;
+}
+body.debug {
+    background:         url(grid-85.gif);
+}
+body * {
+    line-height:        1.538em;    /* 20px / 13px */
+}
+a {
+    color:              #000;
+}
+a[href^="mailto"] { 
+    text-decoration:    none;
+}
+
+#pdf {
+    float:              right;
+    padding-top:        10px;
+}
+#header {
+    margin-left:        340px;
+}
+#header h1 {
+    font-family:        'Museo',
+                        'Constantia',
+                        serif;
+}
+#header ul {
+    margin-left:        0;
+}
+#header p {
+    margin-left:        0;
+    margin-bottom:      0;
+    font-weight:        bold;
+}
+#links, #header a {
+    color:              #999;
+}
+h1 {
+    font-size:          3em;
+}
+address img {
+    position:           absolute;
+    top:                0;
+    left:               85px;
+}
+address span {
+    position:           absolute; 
+    left:               -999em;
+    width:              500em;
+}
+address a {
+    display:            block;
+}
+#summary {
+    margin-bottom:      -1.538em;
+}
+
+
+h2 {
+    position:           absolute; 
+    left:               -999em;
+    width:              500em;
+}
+
+
+p, ul {
+    margin-left:        340px;
+    margin-bottom:      1.538em;
+}
+
+
+.section {
+    padding-top:        1.538em;
+    margin-bottom:      1.538em;
+}
+.job {
+    background:         url(dots.gif) repeat-x top;
+}
+.section:after {
+    content:            '.';
+    display:            block;
+    height:             0;
+    clear:              both;
+    visibility:         hidden;
+}
+h3 {
+    font-family:        'Museo',
+                        'Constantia',
+                        serif;
+    font-size:          1.154em;        /* 15px / 13px */
+    line-height:        1.333em;        /* 20px / 15px */
+    font-weight:        normal;
+    width:              245px;
+    text-align:         right;
+    float:              left;
+    color:              #999;
+}
+.job h3 em {
+    text-transform:     uppercase;
+}
+h3 em {
+    display:            block;
+    font-weight:        bold;
+    color:              #000;
+}
+h3 span {
+    position:           absolute; 
+    left:               -999em;
+    width:              500em;
+}
+div.dates {
+    color:              #999;
+    float:              left;
+    clear:              left;
+    width:              245px;
+    text-align:         right;
+    margin-left:        0;
+    margin-bottom:      0;
+    font-size:          0.846em;        /* 11px / 13px */
+    line-height:        1.818em;        /* 20px / 11px */
+    margin-top:         1.818em;        /* 20px / 11px */
+}
+div.dates span {
+    display:            block;
+}
+
+.run-on li {
+    display:            inline;
+    padding-right:      0.25em;
+}
+.run-on li:after {
+    content:            ',';
+}
+.run-on li:last-child:after {
+    content:            '';
+}
+
+
+#footer {
+    font-size:          0.846em;        /* 11px / 13px */
+    line-height:        1.818em;        /* 20px / 11px */
+    margin-top:         5.454em;        /* 60px / 11px */
+    color:              #999;
+}
+#footer a {
+    display:            block;
+}
