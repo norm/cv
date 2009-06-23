@@ -1,7 +1,29 @@
-@import url(http://yui.yahooapis.com/2.6.0/build/reset-fonts/reset-fonts.css);
+/* -*- Mode: CSS; tab-width: 4; indent-tabs-mode: nil; -*-
+ *
+ * http://cv.marknormanfrancis.com/
+ * Feel free to use my CSS as a learning resource, but don't just copy it
+ * wholesale. That makes kitty sad.
+ */
+
+@import url(http://yui.yahooapis.com/2.7.0/build/reset/reset.css);
+
+/* Both font-fonts by Jos Buivenga (exljbris) -> www.exljbris.nl */
+@font-face {
+    font-family:            'Museo';
+    src:                    url(museo.otf) format('opentype');
+}
+@font-face {
+    font-family:            'Museo Sans';
+    src:                    url(museo-sans.otf) format('opentype');
+}
+
 @media print {
+    body {
+        font-size:          11pt;
+        padding-right:      0.5in;
+    }
     .page-break {
-        page-break-before:  always;
+        page-break-after:   always;
         background:         none !important;
     }
     a {
@@ -9,6 +31,9 @@
     }
     #pdf {
         display:            none;
+    }
+    #activities {
+        border-bottom:      1px dotted #999;
     }
     #activities li {
         display:            block !important;
@@ -41,7 +66,7 @@ body.debug {
     background:         url(grid-85.gif);
 }
 body * {
-    line-height:        1.538em;    /* 20px / 13px */
+    line-height:        1.5em;      /* 24px / 16px */
 }
 a {
     color:              #000;
@@ -56,6 +81,7 @@ a[href^="mailto"] {
 }
 #header {
     margin-left:        340px;
+    margin-bottom:      1.5em;
 }
 #header h1 {
     font-family:        'Museo',
@@ -74,7 +100,9 @@ a[href^="mailto"] {
     color:              #999;
 }
 h1 {
-    font-size:          3em;
+    font-size:          2em;        /* 32px / 16px */
+    line-height:        1.5em;      /* 48px / 32px */
+    margin-bottom:      0.75em;     /* 24px / 32px */
 }
 address img {
     position:           absolute;
@@ -90,7 +118,7 @@ address a {
     display:            block;
 }
 #summary {
-    margin-bottom:      -1.538em;
+    margin-bottom:      -1.5em;
 }
 
 
@@ -103,13 +131,13 @@ h2 {
 
 p, ul {
     margin-left:        340px;
-    margin-bottom:      1.538em;
+    margin-bottom:      1.5em;
 }
 
 
 .section {
-    padding-top:        1.538em;
-    margin-bottom:      1.538em;
+    padding-top:        1.5em;
+    margin-bottom:      1.5em;
 }
 .job {
     background:         url(dots.gif) repeat-x top;
@@ -125,8 +153,8 @@ h3 {
     font-family:        'Museo',
                         'Constantia',
                         serif;
-    font-size:          1.154em;        /* 15px / 13px */
-    line-height:        1.333em;        /* 20px / 15px */
+    font-size:          1.25em;     /* 20px / 16px */
+    line-height:        1.2em;      /* 24px / 20px */
     font-weight:        normal;
     width:              245px;
     text-align:         right;
@@ -134,6 +162,7 @@ h3 {
     color:              #999;
 }
 .job h3 em {
+    line-height:        1.2em;      /* 24px / 20px */
     text-transform:     uppercase;
 }
 h3 em {
@@ -152,11 +181,11 @@ div.dates {
     clear:              left;
     width:              245px;
     text-align:         right;
+    font-size:          0.875em;        /* 14px / 16px */
+    line-height:        1.71428em;      /* 24px / 14px */
+    margin-top:         1.71428em;      /* 24px / 14px */
     margin-left:        0;
     margin-bottom:      0;
-    font-size:          0.846em;        /* 11px / 13px */
-    line-height:        1.818em;        /* 20px / 11px */
-    margin-top:         1.818em;        /* 20px / 11px */
 }
 div.dates span {
     display:            block;
@@ -175,9 +204,9 @@ div.dates span {
 
 
 #footer {
-    font-size:          0.846em;        /* 11px / 13px */
-    line-height:        1.818em;        /* 20px / 11px */
-    margin-top:         5.454em;        /* 60px / 11px */
+    font-size:          0.875em;        /* 14px / 16px */
+    line-height:        1.71428em;      /* 24px / 14px */
+    margin-top:         5.14285em;      /* 72px / 14px */
     color:              #999;
 }
 #footer a {
